@@ -1,0 +1,1235 @@
+{% load static %}
+<!doctype html>
+<a class="no-js " lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="description" content="sQuare Bootstrap 4 Admin Dashboard with ui kit.">
+
+<title>Binders | Add Quotation</title>
+<link rel="icon" href="logo.ico" type="image/x-icon">
+<link  rel="stylesheet" href="{% static 'new/assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'new/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css' %}" /><!-- Colorpicker Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/multi-select/css/multi-select.css' %}"><!-- Multi Select Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/jquery-spinner/css/bootstrap-spinner.css' %}"><!-- Bootstrap Spinner Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css' %}"><!-- Bootstrap Tagsinput Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/bootstrap-select/css/bootstrap-select.css' %}" /><!-- Bootstrap Select Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/nouislider/nouislider.min.css' %}" /><!-- noUISlider Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/select2/select2.css' %}" /><!-- Select2 -->
+<!-- Custom Css -->
+<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/color_skins.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<style>
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+</style>
+
+</head>
+<body class="theme-cyan">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="{% static './assets/logo/Logo.png' %}" width="48" height="48" alt="Zucol Services"></div>
+        <p>Please wait...</p>        
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+
+<!-- Top Bar -->
+<nav class="navbar">
+    <ul class="nav navbar-nav navbar-left">
+        <li>
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="index.html"><img src="static\assets\logo\Logo.png" style="width: 40px;margin-left: 19px;"alt="Binders"><span class="m-l-10">Binders</span></a>
+            </div>
+        </li>        
+        <li>
+            <a href="javascript:void(0);" class="menu-sm" data-close="true">
+                <i class="zmdi zmdi-arrow-left"></i>
+                <i class="zmdi zmdi-arrow-right"></i>
+            </a>
+        </li>
+        <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-apps"></i></a>
+            <ul class="dropdown-menu pullDown">
+                <li><a href="mail-inbox.html"><i class="zmdi zmdi-home m-r-10"></i><span>Home</span></a></li>
+                <li><a href="contact.html"><i class="zmdi zmdi-task m-r-10"></i><span>Creat Quotation List</span></a></li>
+                <li><a href="chat.html"><i class="zmdi zmdi-comment-text m-r-10"></i><span>View Order Progress</span></a></li>
+                             
+            </ul>
+        </li>
+        <li class="dropdown notifications hidden-sm-down"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
+            <span class="label-count">5</span>
+            </a>
+            <ul class="dropdown-menu pullDown">
+                <li class="header">New Message</li>
+                <li class="body">
+                    <ul class="menu list-unstyled">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object" src="static/new/assets/images/sm/avatar5.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Alexander <span class="time">13min ago</span></span>
+                                        <span class="message">Meeting with Shawn at Stark Tower by 8 o'clock.</span>                                        
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object" src="static/new/assets/images/xs/avatar6.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Grayson <span class="time">22min ago</span></span>
+                                        <span class="message">You have 5 unread emails in your inbox.</span>                                        
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object" src="static/new/assets/images/xs/avatar3.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Sophia <span class="time">31min ago</span></span>
+                                        <span class="message">OrderPlaced: You received a new oder from Tina.</span>                                        
+                                    </div>
+                                </div>
+                            </a>
+                        </li>                
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object" src="static/new/assets/images/xs/avatar4.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Isabella <span class="time">35min ago</span></span>
+                                        <span class="message">Lara added a comment in Blazing Saddles.</span>                                        
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer"> <a href="javascript:void(0);">View All</a> </li>
+            </ul>
+        </li>
+        <li class="dropdown task"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
+            <span class="label-count">3</span>
+            </a>
+            <ul class="dropdown-menu pullDown">
+                <li class="header">Project</li>
+                <li class="body">
+                    <ul class="menu tasks list-unstyled">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Clockwork Orange <span class="float-right">29%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100" style="width: 29%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Blazing Saddles <span class="float-right">78%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-slategray" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Project Archimedes <span class="float-right">45%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Eisenhower X <span class="float-right">68%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-coral" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Oreo Admin Templates <span class="float-right">21%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-amber" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100" style="width: 21%;"></div>
+                                </div>
+                            </a>
+                        </li>                        
+                    </ul>
+                </li>
+                <li class="footer"><a href="javascript:void(0);">View All</a></li>
+            </ul>
+        </li>        
+        <li class="search_bar hidden-sm-down">
+            <div class="input-group">                
+                <input type="text" class="form-control" placeholder="Search Quotation and Order...">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-search"></i>
+                </span>
+            </div>
+        </li>
+        <li class="float-right">            
+            <a href="javascript:void(0);" class="fullscreen hidden-md-down hidden-sm-down" data-provide="fullscreen"><i class="zmdi zmdi-fullscreen"></i></a>            
+            <a href="javascript:void(0);" class="js-right-chat"><i class="zmdi zmdi-comments"></i></a>
+            <a href="sign-in.html" class="mega-menu"><i class="zmdi zmdi-power"></i></a>
+        </li>        
+    </ul>
+</nav>
+<!-- Left Sidebar -->
+<aside id="leftsidebar" class="sidebar">
+    <div class="menu">        
+        <ul class="list">
+            <li>
+                <div class="user-info">
+                    <div class="image"><a href="index.html"><img src="static\assets\logo\Logo.png" alt="User"></a></div>
+                    <div class="detail">
+                        <h4>Binders</h4>
+                        
+                        
+                    </div>                    
+                </div>
+            </li>
+            
+            <li class="active open"><a href="{% url 'quotation' %}" ><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
+                
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-gamepad"></i><span>Quotation</span></a>
+                <ul class="ml-menu">                   
+                    <li><a href="{% url 'quotation' %}">Create Quotation</a></li>
+                    <li><a href="{% url 'create_quotation' %}"> View Quotation</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="{% url 'view_invoices' %}">View Invoice</a></li>
+                </ul>
+    </div>
+</aside>
+<!-- Right Chatbar -->
+<aside id="rightchat" class="right_chat">
+    <div class="chat_body">
+        <div class="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-search"></i>
+                </span>
+            </div>
+        </div>
+        <ul class="chat-widget m-b-0 clearfix">
+            <li class="left float-left">                    
+                <div class="chat-info">                        
+                    <span class="datetime">6:12</span>                            
+                    <span class="message">Hello, John </span>
+                </div>
+            </li>
+            <li class="right">
+                <div class="chat-info">
+                    <a class="name" href="javascript:void(0);">Alexander</a>
+                    <span class="datetime">6:15</span>
+                    <span class="message">Hi, Alexander<br> How are you!</span>
+                </div>
+            </li>
+            <li class="right">
+                <div class="chat-info">
+                    <a class="name" href="javascript:void(0);">Alexander</a>
+                    <span class="datetime">6:16</span>
+                    <span class="message">There are many variations of passages of Lorem Ipsum available</span>
+                </div>
+            </li>
+            <li class="left float-left">
+                <div class="chat-info">
+                    <span class="datetime">6:25</span>
+                    <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span>
+                </div>
+            </li>
+            <li class="left float-left">
+                <div class="chat-info">
+                    <span class="datetime">6:28</span>
+                    <span class="message">I would love to join the team.</span>
+                </div>
+            </li>
+                <li class="right">
+                <div class="chat-info">
+                    <span class="datetime">7:02</span>
+                    <span class="message">Hello, <br>Michael</span>
+                </div>
+            </li>
+        </ul>
+        <div class="enter_msg">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter text here...">
+                <span class="input-group-addon"><i class="zmdi zmdi-mail-send"></i></span>
+            </div>
+        </div>
+    </div>    
+    <div class="chat_list">
+        <ul class="list-unstyled clearfix">
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar1.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar2.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li class="active"><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar3.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar4.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar5.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar6.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar7.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar8.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar9.jpg' %}" class="rounded-circle" alt=""></a></li>
+        </ul>
+    </div>
+</aside>
+<!-- Right Sidebar -->
+
+
+<section class="content">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>Request Application</h2>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="index-2.html"><i class="zmdi zmdi-home"></i> Home</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Attendance</a></li>
+                    <li class="breadcrumb-item active">Request Application</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid">
+            <div class="col-lg-12 col-md-12 col-sm-12" id="abc" style="display:none;">
+                    <div class="">        
+                        <div class="row clearfix">
+                                
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="card">
+                                        <div class="header">
+                                            <h2><strong>Add</strong> Client</h2>
+                                            <ul>
+                                                    <button class="btn btn-Warning btn-icon btn-icon-mini btn-round" style="float:right;" id="hid" onclick="hideDiv()"><i class="zmdi zmdi-close"></i></button>
+                                            </ul>
+                    
+                                        </div>
+                                        <div class="body">
+                                            <form id="add_client" enctype="multipart/form-data" method="POST" action="add_client">
+                                            {% csrf_token %}
+                                                    <div class="form-group form-float">
+                                                            <label class="form-label">Client Details:</label>
+                                                            </div>
+                                                <div class="form-group form-float">
+                                                    <input type="text" class="form-control" placeholder="Client Name" id="name" name="name" required>
+                                                </div>
+                                                <div class="form-group form-float">
+                                                    <input type="number" class="form-control" placeholder="Client Number" id="number" name="number" required>
+                                                </div>
+                                                <div class="form-group form-float">
+                                                    <input type="email" class="form-control" placeholder="Client Email" id="email" name="email" required>
+                                                </div>
+                                                <div class="form-group form-float">
+                                                    <input type="text" class="form-control" placeholder="Client Address" id="address" name="address" required>
+                                                </div>
+                                                <div class="form-group form-float">
+                                                        <input type="text" class="form-control" placeholder="PAN Number" id="pan" name="pan" required>
+                                                    </div>
+                                                    <div class="form-group form-float">
+                                                            <input type="text" class="form-control" placeholder="GST Number" id="gst" name="gst" required>
+                                                        </div>
+                                                 
+                                        
+                                            <div class="form-group">
+                                                    <div class="checkbox">
+                                                        <input id="checkbox" type="checkbox">
+                                                        <label for="checkbox">I have read and Confirmed the details</label>
+                                                    </div>
+                                                    <button class="btn btn-raised btn-primary btn-round waves-effect" style="float: none" name="submit" type="submit">SUBMIT</button>
+                                            
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>           
+                        </div>
+                        
+                    </div>
+
+
+
+    <div class="container-fluid">
+                
+                
+               
+        <!-- Basic Validation -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header">
+                    <div class="row clearflix">
+                        <h2><strong>Add </strong> Quotation</h2> <div style="margin-right:20px;right:0px !important;position: absolute;"><button class="btn btn-raised btn-primary btn-round waves-effect" id="add_client" onclick="showDiv()">Add Client</button> </div></div>
+                       
+
+                    </div>
+                    <div class="body">
+                        <div id="form_validation"  enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group form-float">
+                        <label class="form-label">Client Name</label></div>
+                        <div class="form-group">  
+                                <select class="col-md-3 form-control show-tick" id="c_name" name="c_name" style="float: right;" data-live-search="true">
+                                    <option >-- Select Client Name --</option>
+                                     {% for d in data%}
+                                    <option value="{{ d.c_name }}">{{ d.c_name }}</option>
+                                    {% endfor %}
+                                </select>
+                        </div>
+                                        
+                       <div class="form-group form-float">
+                        <label class="form-label">Product</label>   </div>
+                        <div class="form-group">  
+                                <select class="col-md-3 form-control z-index show-tick" id="p" name="product" style="float: right;" data-live-search="true">
+                                    <option >-- Select Product Type --</option>
+                                    <option value="1">Visiting Card</option>
+                                    <option value="2">ID Card</option>
+                                    <option value="3">Entry Pass</option>
+                                    <option value="4">Invitation Card</option>
+                                    <option value="5">Brouchure</option>
+                                    <option value="6">Pamplate</option>
+                                    <option value="7">Letter-Head Box</option>
+                                    <option value="8">Envelopes</option>
+                                    
+                                </select>
+                        </div>      
+                        <div class="form-group form-float">
+                        <label class="form-label">Sub-Product</label>   </div>
+                        <div class="form-group">  
+
+                                <select class="col-md-3 form-control z-index show-tick" id="sub_p" name="sub_product" style="float: right;" data-live-search="true">
+                                    <option >-- Select Product Type --</option>
+                                    <option value="Visiting Card">Visiting Card</option>
+                                    <option value="ID Card">ID Card</option>
+                                    <option value="Entry Pass">Entry Pass</option>
+                                    <option value="Invitation Card">Invitation Card</option>
+                                    <option value="Brouchure">Brouchure</option>
+                                    <option value="Pamplate">Pamplate</option>
+                                    <option value="Letter-Head Box">Letter-Head Box</option>
+                                    <option value="Envelopes">Envelopes</option>
+                                    
+                                </select>
+                        </div>         
+                            
+                        <div class="form-group form-float">
+                        <label class="form-label">Quantity</label>   </div>
+                        <div class="form-group form-float">
+                            <input type="text" class="form-control" placeholder="Enter Quantity" id="qty" name="qty" required>
+                        </div>  
+                         <div class="form-group form-float">
+                        <label class="form-label">Paper Size</label>   </div>
+                        
+                        <div class="col-lg-12 col-md-12 col-sm-12 row clearfix">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                        <div class="form-group form-float">
+                            <input type="text" class="form-control" placeholder="Enter Size" id="size1" name="size1" required>
+                        </div>    
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1" style="text-align:center;"> 
+                        <div class="form-group form-float">
+                            <h3>x</h3>
+                        </div>    
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                        <div class="form-group form-float">
+                            <input type="text" class="form-control" placeholder="Enter Size" id="size2" name="size2" required>
+                        </div>    
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1"  style="text-align:center;">
+                        <div class="form-group form-float" >
+                        </div>    
+                        </div>
+                        
+                            </div>
+                          
+
+                    <br>
+            
+                    <br>
+                    
+                        <div class="form-group">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkbox1" name="checkbox1">
+                                    <label for="checkbox1">I have read and confirmed all the details</label>
+                                </div>
+                            </div>
+                            <button class="btn btn-raised btn-primary btn-round waves-effect" onClick="show();" id="btn" data-toggle="modal" data-target="#largeModal" name="submit" type="button">SUBMIT</button>
+                        </div>
+                       
+                    <div>
+                    
+                </div>
+            </div>
+        </div> 
+    </div>
+
+</section>
+<div class="modal fade" id="largeModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="title" id="largeModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body"> 
+                <style>
+                    #div1 
+                    { 
+                    float: left; 
+                    position: relative;
+                    margin: 15px;
+                    width: 15%;
+                    height: 15%;
+                    background-color: green;
+                    
+                    } 
+                    #div2 
+                    { 
+                    float: left; 
+                    position: relative;
+                    background-color:peru;
+                    
+                    }
+                    #div3
+                    { box-sizing: content-box;
+
+                    }   
+                </style>
+            <a href="#" onclick="document.form1.submit();">
+                <div id="d1" style="width:100%;float:left;" >
+                    <div id="div1" style="height: 20px; width:29px" >
+                        <form id="form1" name="form1" method="POST" action="create_quotation">
+                        {% csrf_token %}
+                        <input type="hidden" name="box_height" id="box_height" value="20">
+                        <input type="hidden" name="box_width" id="box_width" value="29">
+                        <input type="hidden" name="div_height" id="div_height" value="0">
+                        <input type="hidden" name="div_width" id="div_width" value="0">
+                        <input type="hidden" name="maxbox" id="maxbox" value="0">
+                        <input type="hidden" name="clientname" id="clientname" value="0">
+                        <input type="hidden" name="product" id="product" value="0">
+                        <input type="hidden" name="sub_product" id="sub_product" value="0">
+                        <input type="hidden" name="qnty" id="qnty" value="0">
+                       
+                        <div id="1">
+          
+                        </div>     
+                    </form>
+                    </div>
+                </div>
+            </a>
+            <a href="#" onclick="document.form2.submit();">
+                <div id="d2" style="width:100%;float:left;">
+                    <div id="div1" style="height:29px; width:41px">
+                        <form id="form2" name="form2" method="POST" action="create_quotation">
+                        {% csrf_token %}
+                        <input type="hidden" name="box_height" id="box_height" value="29">
+                        <input type="hidden" name="box_width" id="box_width" value="41">
+                        <input type="hidden" name="div_height" id="div_height" value="0">
+                        <input type="hidden" name="div_width" id="div_width" value="0">
+                        <input type="hidden" name="maxbox" id="maxbox" value="0">
+                        <input type="hidden" name="clientname" id="clientname" value="0">
+                        <input type="hidden" name="product" id="product" value="0">
+                        <input type="hidden" name="sub_product" id="sub_product" value="0">
+                        <input type="hidden" name="qnty" id="qnty" value="0">
+                        <div id="2">
+                          
+                        </div>     
+                    </form>
+                      </div>
+                    </div>
+                </a>
+                <a href="#" onclick="document.form3.submit();">
+                      <div id="d3"style="width:100%;float:left;">
+                    <div id="div1" style="height:41px; width:58px">
+                        <form id="form3" name="form3" method="POST" action="create_quotation">
+                        {% csrf_token %}
+                        <input type="hidden" name="box_height" id="box_height" value="41">
+                        <input type="hidden" name="box_width" id="box_width" value="58">
+                        <input type="hidden" name="div_height" id="div_height" value="0">
+                        <input type="hidden" name="div_width" id="div_width" value="0">
+                        <input type="hidden" name="maxbox" id="maxbox" value="0">
+                        <input type="hidden" name="clientname" id="clientname" value="0">
+                               <input type="hidden" name="product" id="product" value="0">
+                               <input type="hidden" name="sub_product" id="sub_product" value="0">
+                               <input type="hidden" name="qnty" id="qnty" value="0">
+                        <div id="3">
+          
+                        </div>     
+                    </form>
+                      </div>
+                    </div>
+                </a>
+                <a href="#" onclick="document.form4.submit();">
+                    <div id="d4" style="width:100%;float:left;">
+                    <div id="div1" style="height:58px; width:83px">
+                        <form id="form4" name="form4" method="POST" action="create_quotation">
+                        {% csrf_token %}
+                        <input type="hidden" name="box_height" id="box_height" value="58">
+                        <input type="hidden" name="box_width" id="box_width" value="83">
+                        <input type="hidden" name="div_height" id="div_height" value="0">
+                        <input type="hidden" name="div_width" id="div_width" value="0">
+                        <input type="hidden" name="maxbox" id="maxbox" value="0">
+                        <input type="hidden" name="clientname" id="clientname" value="0">
+                               <input type="hidden" name="product" id="product" value="0">
+                               <input type="hidden" name="sub_product" id="sub_product" value="0">
+                               <input type="hidden" name="qnty" id="qnty" value="0">
+                        <div id="4">
+          
+                        </div>     
+                    </form>
+                      </div>
+                    </div>
+                </a>
+                <a href="#" onclick="document.form5.submit();">
+                    <div id="d5" style="width:100%;float:left;">
+                    <div id="div1" style="height: 84px; width:117px"> 
+                        <form id="form5" name="form5" method="POST" action="create_quotation">
+                        {% csrf_token %}
+                        <input type="hidden" name="box_height" id="box_height" value="83">
+                        <input type="hidden" name="box_width" id="box_width" value="117">
+                        <input type="hidden" name="div_height" id="div_height" value="0">
+                        <input type="hidden" name="div_width" id="div_width" value="0">
+                        <input type="hidden" name="maxbox" id="maxbox" value="0">
+                        <input type="hidden" name="clientname" id="clientname" value="0">
+                               <input type="hidden" name="product" id="product" value="0">
+                               <input type="hidden" name="sub_product" id="sub_product" value="0">
+                               <input type="hidden" name="qnty" id="qnty" value="0">
+                        <div id="5">
+          
+                        </div>   
+                    </form>
+                      </div>
+                    </div>
+                </a>
+                <a href="#" onclick="document.form6.submit();">
+                    <div id="d6"style="width:100%;float:left;">
+                    <div id="div1" style="height: 117px; width:165px"> 
+                        <form id="form6" name="form6" method="POST" action="create_quotation">
+                        {% csrf_token %}
+                        <input type="hidden" name="box_height" id="box_height" value="117">
+                        <input type="hidden" name="box_width" id="box_width" value="165">
+                        <input type="hidden" name="div_height" id="div_height" value="0">
+                        <input type="hidden" name="div_width" id="div_width" value="0">
+                        <input type="hidden" name="maxbox" id="maxbox" value="0">
+                        <input type="hidden" name="clientname" id="clientname" value="0">
+                               <input type="hidden" name="product" id="product" value="0">
+                               <input type="hidden" name="sub_product" id="sub_product" value="0">
+                               <input type="hidden" name="qnty" id="qnty" value="0">
+                        <div id="6">
+          
+                        </div>     
+                    </form> 
+                      </div>
+                    </div>
+                </a>
+                <a href="#" onclick="document.form7.submit();">
+                    <div id="d7" style="width:100%;float:left;">
+                    <div id="div1" style="height: 165px; width:234px"> 
+                        <form id="form7" name="form7" method="POST" action="create_quotation">
+                        {% csrf_token %}
+                        <input type="hidden" name="box_height" id="box_height" value="165">
+                        <input type="hidden" name="box_width" id="box_width" value="234">
+                        <input type="hidden" name="div_height" id="div_height" value="0">
+                        <input type="hidden" name="div_width" id="div_width" value="0">
+                        <input type="hidden" name="maxbox" id="maxbox" value="0">
+                        <input type="hidden" name="clientname" id="clientname" value="0">
+                        <input type="hidden" name="product" id="product" value="0">
+                        <input type="hidden" name="sub_product" id="sub_product" value="0">
+                        <input type="hidden" name="qnty" id="qnty" value="0">
+                        <div id="7">
+          
+                        </div>     
+                    </form > 
+                      </div>
+                    </div>
+                </a>
+                <a href="#" onclick="document.form8.submit();">
+                    <div id="d8" style="width:100%;float:left;"> 
+                    <div id="div1" style="height: 234px; width:331px"> 
+                        <form id="form8" name="form8" method="POST" action="create_quotation">
+                        {% csrf_token %}
+                        <input type="hidden" name="box_height" id="box_height" value="234">
+                        <input type="hidden" name="box_width" id="box_width" value="331">
+                        <input type="hidden" name="div_height" id="div_height" value="0">
+                        <input type="hidden" name="div_width" id="div_width" value="0">
+                        <input type="hidden" name="maxbox" id="maxbox" value="0">
+                        <input type="hidden" name="clientname" id="clientname" value="0">
+                               <input type="hidden" name="product" id="product" value="0">
+                               <input type="hidden" name="sub_product" id="sub_product" value="0">
+                               <input type="hidden" name="qnty" id="qnty" value="0">
+                        <div id="8">
+          
+                        </div>     
+                    </form > 
+                      </div>
+                    </div>
+                </a>
+                <a href="#" onclick="document.form9.submit();">
+                    <div id="d9" style="width:100%;float:left;" >
+                    <div id="div1" style="height: 331px; width:468px"> 
+                        <form id="form9" name="form9" method="POST" action="create_quotation">
+                        {% csrf_token %}
+                        <input type="hidden" name="box_height" id="box_height" value="331">
+                        <input type="hidden" name="box_width" id="box_width" value="468">
+                        <input type="hidden" name="div_height" id="div_height" value="0">
+                        <input type="hidden" name="div_width" id="div_width" value="0">
+                        <input type="hidden" name="maxbox" id="maxbox" value="0">
+                        <input type="hidden" name="clientname" id="clientname" value="0">
+                        <input type="hidden" name="product" id="product" value="0">
+                        <input type="hidden" name="sub_product" id="sub_product" value="0">
+                        <input type="hidden" name="qnty" id="qnty" value="0">
+                        <div id="9">
+          
+                        </div>     
+                    </form > 
+                      </div>
+                    </div>
+                </a>
+                <a href="#" onclick="document.form10.submit();">
+                    <div id="d10" style="width:100%;float:left;" >
+                    <div id="div1" style="height: 468px; width:662px">
+                        <form id="form10" name="form10" method="POST" action="create_quotation">
+                        {% csrf_token %}
+                        <input type="hidden" name="box_height" id="box_height" value="468">
+                        <input type="hidden" name="box_width" id="box_width" value="662">
+                        <input type="hidden" name="div_height" id="div_height" value="0">
+                        <input type="hidden" name="div_width" id="div_width" value="0">
+                        <input type="hidden" name="maxbox" id="maxbox" value="0">
+                        <input type="hidden" name="clientname" id="clientname" value="0">
+                        <input type="hidden" name="product" id="product" value="0">
+                        <input type="hidden" name="sub_product" id="sub_product" value="0">
+                        <input type="hidden" name="qnty" id="qnty" value="0">
+                        <div id="10">
+          
+                        </div>     
+                    </form>
+                      
+                      </div>
+                    </div>
+                </a>
+                    <a href="#" onclick="document.form11.submit();">
+                    <div id="d11" style="width:100%;float:left;">
+                    <div id="div1" style="height: 662px; width:936px">
+                        <form id="form11" name="form11" method="POST" action="create_quotation">
+                            {% csrf_token %}
+                               <input type="hidden" name="box_height" id="box_height" value="662">
+                               <input type="hidden" name="box_width" id="box_width" value="936">
+                               <input type="hidden" name="div_height" id="div_height" value="0">
+                               <input type="hidden" name="div_width" id="div_width" value="0">
+                               <input type="hidden" name="maxbox" id="maxbox" value="0">
+                               <input type="hidden" name="clientname" id="clientname" value="0">
+                               <input type="hidden" name="product" id="product" value="0">
+                               <input type="hidden" name="sub_product" id="sub_product" value="0">
+                               <input type="hidden" name="qnty" id="qnty" value="0">
+                              <div id="11">
+                               
+                              </div>     
+                          </form>
+                      </div>
+                    </div> </a></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-simple btn-round waves-effect" data-dismiss="modal">CLOSE</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Get the modal
+    var largeModal = document.getElementById("largeModal");
+    var btn = document.getElementById("btn");
+    
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+              var a=document.getElementById("size1").value;
+              var b=document.getElementById("size2").value;
+              var g=document.getElementById("qty").value;
+              var d=document.getElementById("c_name").value;
+              var e=document.getElementById("p").value;
+              var f=document.getElementById("sub_p").value;
+              var h=parseInt(a,10);
+              var w=parseInt(b,10);
+              var g=parseInt(g,10);
+              var x=h;
+              var y=w;
+              var hig= 662;
+              var wid= 936;
+              var c=0;
+              if(x+2<=hig && y+2<=wid){
+              
+                largeModal.style.display = "block";
+              document.getElementById("11").innerHTML=" <div id='div3' style='height:"+h+"px ; width:"+w+"px ; float: left;border: 1px solid black;' >     </div>";
+              document.getElementById("div3").style.backgroundColor = "red";
+        
+                  var participantsField = document.getElementById("div3"),
+                  form = document.getElementById('form11'),
+                  y = w+2;
+                  c = 1;
+              while(y<=wid){
+                  x=h+2; 
+                while(x<=hig){
+                  if(y+w>wid && x+h>hig)
+                  {
+                    
+                    break;
+                  }
+                      x = x + h +2;
+                     var clone = participantsField.cloneNode(true);
+                     form.appendChild(clone);
+                     c = c+1;
+                  }
+                  y = y + w +2;
+              }
+              document.getElementById('d11').append('number of pages' +c);
+              document.form11.div_width.value= w;
+              document.form11.div_height.value= h;
+              document.form11.maxbox.value= c;
+              document.form11.clientname.value=  d;
+              document.form11.product.value=  e;
+              document.form11.sub_product.value= f;
+              document.form11.qnty.value= g;
+              
+            }
+              var x=h;
+              var y=w;
+              var hig= 468;
+              var wid= 662;
+              var c=0;
+              if(x+2<=hig && y+2<=wid){
+              
+              largeModal.style.display = "block";
+              document.getElementById("10").innerHTML=" <div id='div3' style='height:"+h+"px ; width:"+w+"px ; float: left; border: 1px solid black;' >     </div>";
+              document.getElementById("div3").style.backgroundColor = "red";
+                  var participantsField = document.getElementById("div3"),
+                  form = document.getElementById('form10'),
+                  y = w+2;
+                 c = 1;
+              while(y<=wid){
+                  x=h+2;
+                while(x<=hig){
+                  if(y+w+2>wid && x+h+2>hig)
+                  {
+                    break;
+                  }
+                      x = x + h +2;
+                     var clone = participantsField.cloneNode(true);
+                     form.appendChild(clone);
+                     c=c+1;
+                  }
+                  y = y + w +2;
+              }
+              document.getElementById('d10').append('number of pages' +c);
+              document.form10.div_width.value= w;
+              document.form10.div_height.value= h;
+              document.form10.maxbox.value= c;
+              document.form10.clientname.value=  d;
+              document.form10.product.value=  e;
+              document.form10.sub_product.value= f;
+              document.form10.qnty.value= g;
+            }
+            var x=h;
+            var y=w;
+            var hig= 331;
+            var wid= 468;
+            var c=0;
+            if(x+2<=hig && y+2<=wid){
+              
+              largeModal.style.display = "block";
+              document.getElementById("9").innerHTML=" <div id='div3' style='height:"+h+"px ; width:"+w+"px ; float: left;border: 1px solid black;' >     </div>";
+              document.getElementById("div3").style.backgroundColor = "red";
+
+              
+                  var participantsField = document.getElementById("div3"),
+                  form = document.getElementById('form9'),
+                  y = w+2;
+                   c = 1;
+              while(y<=wid){
+                  x=h+2;
+                while(x<=hig){
+                  if(y+w+2>wid && x+h+2>hig)
+                  {
+                    
+                    break;
+                  }
+                      x = x + h + 2;
+                     var clone = participantsField.cloneNode(true);
+                     form.appendChild(clone);
+                     c=c+1;
+                  }
+                  y = y + w + 2;
+              }
+              document.getElementById('d9').append('number of pages' +c);
+              document.form9.div_width.value= w;
+              document.form9.div_height.value= h;
+              document.form9.maxbox.value= c;
+              document.form9.clientname.value=  d;
+              document.form9.product.value=  e;
+              document.form9.sub_product.value= f;
+              document.form9.qnty.value= g;
+            }
+            var x=h;
+            var y=w;
+            var hig= 234;
+            var wid= 331;
+            var c=0;
+            if(x+2<=hig && y+2<=wid){
+             
+                largeModal.style.display = "block";
+              document.getElementById("8").innerHTML=" <div id='div3' style='height:"+h+"px ; width:"+w+"px ; float: left;border: 1px solid black; ' >     </div>";
+              document.getElementById("div3").style.backgroundColor = "red";
+
+              
+                  var participantsField = document.getElementById("div3"),
+                  form = document.getElementById('form8'),
+                  y = w+2;
+                   c = 1;
+              while(y<=wid){
+                  x=h+2;
+                while(x<=hig){
+                  if(y+w+2>wid && x+h+2>hig)
+                  {
+                   
+                    break;
+                  }
+                      x = x + h + 2;
+                     var clone = participantsField.cloneNode(true);
+                     form.appendChild(clone);
+                     c=c+1;
+                  }
+                  y = y + w + 2;
+              }
+              document.getElementById('d8').append('number of pages' +c);
+              document.form8.div_width.value= w;
+              document.form8.div_height.value= h;
+              document.form8.maxbox.value= c;
+              document.form8.clientname.value=  d;
+              document.form8.product.value=  e;
+              document.form8.sub_product.value= f;
+              document.form8.qnty.value= g;
+            }
+            var x=h;
+            var y=w;
+            var hig= 165;
+            var wid= 234;
+            var c=0;
+            if(x+2<=hig && y+2<=wid){
+              
+                largeModal.style.display = "block";
+              document.getElementById("7").innerHTML=" <div id='div3' style='height:"+h+"px ; width:"+w+"px ; float: left;border: 1px solid black; ' >     </div>";
+              document.getElementById("div3").style.backgroundColor = "red";
+
+              
+                  var participantsField = document.getElementById("div3"),
+                  form = document.getElementById('form7'),
+                  y = w+2;
+                  c = 1;
+              while(y<=wid){
+                  x=h+2;
+                while(x<=hig){
+                  if(y+w+2>wid && x+h+2>hig)
+                  {
+                    
+                    break;
+                  }
+                      x = x + h + 2;
+                     var clone = participantsField.cloneNode(true);
+                     form.appendChild(clone);
+                     c=c+1;
+                  }
+                  y = y + w + 2;
+              }
+              document.getElementById('d7').append('number of pages' +c);
+              document.form7.div_width.value= w;
+              document.form7.div_height.value= h;
+              document.form7.maxbox.value= c;
+              document.form7.clientname.value=  d;
+              document.form7.product.value=  e;
+              document.form7.sub_product.value= f;
+              document.form7.qnty.value= g;
+            }
+            var x=h;
+            var y=w;
+            var hig= 117;
+            var wid= 165;
+            var c=0;
+            if(x+2<=hig && y+2<=wid){
+                largeModal.style.display = "block";
+              document.getElementById("6").innerHTML=" <div id='div3' style='height:"+h+"px ; width:"+w+"px ; float: left;border: 1px solid black; ' >     </div>";
+              document.getElementById("div3").style.backgroundColor = "red";
+
+              
+                  var participantsField = document.getElementById("div3"),
+                  form = document.getElementById('form6'),
+                  y = w+2;
+                  c = 1;
+              while(y<=wid){
+                  x=h+2;
+                while(x<=hig){
+                  if(y+w+2>wid && x+h+2>hig)
+                  {
+                   
+                    break;
+                  }
+                      x = x + h+2;
+                     var clone = participantsField.cloneNode(true);
+                     form.appendChild(clone);
+                     c=c+1;
+                  }
+                  y = y + w+2;
+              }
+              document.getElementById('d6').append('number of pages' +c);
+              document.form6.div_width.value= w;
+              document.form6.div_height.value= h;
+              document.form6.maxbox.value= c;
+              document.form6.clientname.value=  d;
+              document.form6.product.value=  e;
+              document.form6.sub_product.value= f;
+              document.form6.qnty.value= g;
+            }
+            var x=h;
+            var y=w;
+            var hig= 84;
+            var wid= 117;
+            var c=0;
+            if(x+2<=hig && y+2<=wid){
+              
+                largeModal.style.display = "block";
+              document.getElementById("5").innerHTML=" <div id='div3' style='height:"+h+"px ; width:"+w+"px ; float: left; border: 1px solid black;' >     </div>";
+              document.getElementById("div3").style.backgroundColor = "red";
+
+              
+                  var participantsField = document.getElementById("div3"),
+                  form = document.getElementById('form5'),
+                  y = w+2;
+                  c = 1;
+              while(y<=wid){
+                  x=h+2;
+                while(x<=hig){
+                  if(y+w+2>wid && x+h+2>hig)
+                  {
+                  
+                    break;
+                  }
+                      x = x + h + 2;
+                     var clone = participantsField.cloneNode(true);
+                     form.appendChild(clone);
+                     c=c+1;
+                  }
+                  y = y + w + 2;
+              }
+              document.getElementById('d5').append('number of pages' +c);
+              document.form5.div_width.value= w;
+              document.form5.div_height.value= h;
+              document.form5.maxbox.value= c;
+              document.form5.clientname.value=  d;
+              document.form5.product.value=  e;
+              document.form5.sub_product.value= f;
+              document.form5.qnty.value= g;
+                          
+
+            }
+            var x=h;
+            var y=w;
+            var hig= 58;
+            var wid= 83;
+            var c=0;
+            if(x+2<=hig && y+2<=wid){
+                largeModal.style.display = "block";
+              document.getElementById("4").innerHTML=" <div id='div3' style='height:"+h+"px ; width:"+w+"px ; float: left; border: 1px solid black;' >     </div>";
+              document.getElementById("div3").style.backgroundColor = "red";
+
+              
+                  var participantsField = document.getElementById("div3"),
+                  form = document.getElementById('form4'),
+                  y = w+2;
+                  c = 1;
+              while(y<=wid){
+                  x=h+2;
+                while(x<=hig){
+                  if(y+w+2>wid && x+h+2>hig)
+                  {
+                    break;
+                  }
+                      x = x + h + 2;
+                     var clone = participantsField.cloneNode(true);
+                     form.appendChild(clone);
+                     c=c+1;
+                  }
+                  y = y + w + 2;
+              }
+              document.getElementById('d4').append('number of pages' +c);
+              document.form4.div_width.value= w;
+              document.form4.div_height.value= h;
+              document.form4.maxbox.value= c;
+              document.form4.clientname.value=  d;
+              document.form4.product.value=  e;
+              document.form4.sub_product.value= f;
+              document.form4.qnty.value= g;
+            }
+            var x=h;
+            var y=w;
+            var hig= 41;
+            var wid= 58;
+            var c=0;
+            if(x+2<=hig && y+2<=wid){
+             
+                largeModal.style.display = "block";
+              document.getElementById("3").innerHTML=" <div id='div3' style='height:"+h+"px ; width:"+w+"px ; float: left; border: 1px solid black;' >     </div>";
+              document.getElementById("div3").style.backgroundColor = "red";
+
+              
+                  var participantsField = document.getElementById("div3"),
+                  form = document.getElementById('form3'),
+                  y = w+2;
+                  c = 1;
+              while(y<=wid){
+                  x=h+2;
+                while(x<=hig){
+                  if(y+w+2>wid && x+h+2>hig)
+                  {
+                    c=c+1;
+                    break;
+                  }
+                      x = x + h + 2;
+                     var clone = participantsField.cloneNode(true);
+                     form.appendChild(clone);
+                     c=c+1;
+                  }
+                  y = y + w + 2;
+              }
+              document.getElementById('d3').append('number of pages' +c);
+              document.form3.div_width.value= w;
+              document.form3.div_height.value= h;
+              document.form3.maxbox.value= c;
+              document.form3.clientname.value=  d;
+              document.form3.product.value=  e;
+              document.form3.sub_product.value= f;
+              document.form3.qnty.value= g;
+            }
+            var x=h;
+            var y=w;
+            var hig= 29;
+            var wid= 41;
+            var c=0;
+            if(x+2<=hig && y+2<=wid){
+              
+                largeModal.style.display = "block";
+              document.getElementById("2").innerHTML=" <div id='div3' style='height:"+h+"px ; width:"+w+"px ; float: left; border: 1px solid black;' >     </div>";
+              document.getElementById("div3").style.backgroundColor = "red";
+
+              
+                  var participantsField = document.getElementById("div3"),
+                  form = document.getElementById('form2'),
+                  y = w+2;
+                 c = 1;
+              while(y<=wid){
+                  x=h+2;
+                while(x<=hig){
+                  if(y+w+2>wid && x+h+2>hig)
+                  {
+                    break;
+                  }
+                      x = x + h + 2;
+                     var clone = participantsField.cloneNode(true);
+                     form.appendChild(clone);
+                     c=c+1;
+                  }
+                  y = y + w + 2;
+              }
+              document.getElementById('d2').append('number of pages' +c);
+              document.form2.div_width.value= w;
+              document.form2.div_height.value= h;
+              document.form2.maxbox.value= c;
+              document.form2.clientname.value=  d;
+              document.form2.product.value=  e;
+              document.form2.sub_product.value= f;
+              document.form2.qnty.value= g;
+            }
+            var x=h;
+            var y=w;
+            var hig= 20;
+            var wid= 29;
+            var c=0;
+            if(x+2<=hig && y+2<=wid){
+              
+              
+                largeModal.style.display = "block";
+              document.getElementById("1").innerHTML=" <div id='div3' style='height:"+h+"px ; width:"+w+"px ; float: left; border: 1px solid black;' >     </div>";
+              document.getElementById("div3").style.backgroundColor = "red";
+
+              
+                  var participantsField = document.getElementById("div3"),
+                  form = document.getElementById('form1'),
+                  y = w+2;
+                  c = 1;   
+              while(y<=wid){
+                  x=h+2;
+                while(x<=hig){
+                  if(y+w+2>wid && x+h+2>hig)
+                  {
+                    break;
+                  }
+                      x = x + h + 2;
+                     var clone = participantsField.cloneNode(true);
+                     form.appendChild(clone);
+                     c=c+1;
+                  }
+                  y = y + w + 2;
+              }
+              document.getElementById('d1').append('number of pages' +c);
+              document.form1.div_width.value= w;
+              document.form1.div_height.value= h;
+              document.form1.maxbox.value= c;
+              document.form1.clientname.value=  d;
+              document.form1.product.value=  e;
+              document.form1.sub_product.value= f;
+              document.form1.qnty.value= g;
+
+            } 
+            
+          }
+          function showDiv() {
+            document.getElementById('abc').style.display = "block";
+         }
+         function hideDiv() {
+            document.getElementById('abc').style.display = "none";
+         }
+  </script>
+
+
+      
+
+<!-- Jquery Core Js --> 
+<script src="{% static 'assets/bundles/libscripts.bundle.js' %}"></script> <!-- Lib Scripts Plugin Js --> 
+<script src="{% static 'assets/bundles/vendorscripts.bundle.js' %}"></script> <!-- Lib Scripts Plugin Js --> 
+
+<script src="{% static 'new/assets/plugins/jquery-validation/jquery.validate.js' %}"></script> <!-- Jquery Validation Plugin Css --> 
+<script src="{% static 'new/assets/plugins/jquery-steps/jquery.steps.js' %}"></script> <!-- JQuery Steps Plugin Js --> 
+
+<script src="{% static 'assets/bundles/mainscripts.bundle.js' %}"></script><!-- Custom Js --> 
+<script src="{% static 'assets/js/pages/forms/form-validation.js' %}"></script> 
+</body>
+<footer><p> &#169; 2020 , copyright kapil sharma, All right reserved.</p>
+    </footer>
+</html

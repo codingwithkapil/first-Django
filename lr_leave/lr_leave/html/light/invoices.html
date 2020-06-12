@@ -1,0 +1,885 @@
+{% load static %}
+<!doctype html>
+<html class="no-js " lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="description" content="">
+
+<title>:: sQuare Light :: Invoice</title>
+<link rel="icon" href="logo.ico" type="image/x-icon">
+<!-- Favicon-->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'new/assets/plugins/sweetalert/sweetalert.css' %}"/>
+
+<!-- Custom Css -->
+<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/color_skins.css' %}">>
+<style>
+td{
+    padding:2px !important;
+}
+
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+</style>
+</head>
+<body class="theme-cyan">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="http://www.wrraptheme.com/templates/square/html/assets/images/logo.svg" width="48" height="48" alt="sQuare"></div>
+        <p>Please wait...</p>        
+    </div>
+</div>
+<!-- Top Bar -->
+<nav class="navbar">
+    <ul class="nav navbar-nav navbar-left">
+        <li>
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="index.html"><img src="static\assets\logo\Logo.png" style="width: 40px;margin-left: 19px;"alt=" Binders"><span class="m-l-10"> Binders</span></a>
+            </div>
+        </li>        
+        <li>
+            <a href="javascript:void(0);" class="menu-sm" data-close="true">
+                <i class="zmdi zmdi-arrow-left"></i>
+                <i class="zmdi zmdi-arrow-right"></i>
+            </a>
+        </li>
+        <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-apps"></i></a>
+            <ul class="dropdown-menu pullDown">
+                <li><a href="mail-inbox.html"><i class="zmdi zmdi-home m-r-10"></i><span>Home</span></a></li>
+                <li><a href="contact.html"><i class="zmdi zmdi-task m-r-10"></i><span>Creat Quotation List</span></a></li>
+                <li><a href="chat.html"><i class="zmdi zmdi-comment-text m-r-10"></i><span>View Order Progress</span></a></li>
+                             
+            </ul>
+        </li>
+        <li class="dropdown notifications hidden-sm-down"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
+            <span class="label-count">5</span>
+            </a>
+            <ul class="dropdown-menu pullDown">
+                <li class="header">New Message</li>
+                <li class="body">
+                    <ul class="menu list-unstyled">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object" src="static/new/assets/images/sm/avatar5.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Alexander <span class="time">13min ago</span></span>
+                                        <span class="message">Meeting with Shawn at Stark Tower by 8 o'clock.</span>                                        
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object" src="static/new/assets/images/xs/avatar6.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Grayson <span class="time">22min ago</span></span>
+                                        <span class="message">You have 5 unread emails in your inbox.</span>                                        
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object" src="static/new/assets/images/xs/avatar3.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Sophia <span class="time">31min ago</span></span>
+                                        <span class="message">OrderPlaced: You received a new oder from Tina.</span>                                        
+                                    </div>
+                                </div>
+                            </a>
+                        </li>                
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="media">
+                                    <img class="media-object" src="static/new/assets/images/xs/avatar4.jpg" alt="">
+                                    <div class="media-body">
+                                        <span class="name">Isabella <span class="time">35min ago</span></span>
+                                        <span class="message">Lara added a comment in Blazing Saddles.</span>                                        
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="footer"> <a href="javascript:void(0);">View All</a> </li>
+            </ul>
+        </li>
+        <li class="dropdown task"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
+            <span class="label-count">3</span>
+            </a>
+            <ul class="dropdown-menu pullDown">
+                <li class="header">Project</li>
+                <li class="body">
+                    <ul class="menu tasks list-unstyled">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Clockwork Orange <span class="float-right">29%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100" style="width: 29%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Blazing Saddles <span class="float-right">78%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-slategray" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Project Archimedes <span class="float-right">45%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Eisenhower X <span class="float-right">68%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-coral" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Oreo Admin Templates <span class="float-right">21%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-amber" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100" style="width: 21%;"></div>
+                                </div>
+                            </a>
+                        </li>                        
+                    </ul>
+                </li>
+                <li class="footer"><a href="javascript:void(0);">View All</a></li>
+            </ul>
+        </li>        
+        <li class="search_bar hidden-sm-down">
+            <div class="input-group">                
+                <input type="text" class="form-control" placeholder="Search Quotation and Order...">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-search"></i>
+                </span>
+            </div>
+        </li>
+        <li class="float-right">            
+            <a href="javascript:void(0);" class="fullscreen hidden-md-down hidden-sm-down" data-provide="fullscreen"><i class="zmdi zmdi-fullscreen"></i></a>            
+            <a href="javascript:void(0);" class="js-right-chat"><i class="zmdi zmdi-comments"></i></a>
+            <a href="sign-in.html" class="mega-menu"><i class="zmdi zmdi-power"></i></a>
+        </li>        
+    </ul>
+</nav>
+<!-- Left Sidebar -->
+<aside id="leftsidebar" class="sidebar">
+    <div class="menu">        
+        <ul class="list">
+            <li>
+                <div class="user-info">
+                    <div class="image"><a href="index.html"><img src="static\assets\logo\Logo.png" alt="User"></a></div>
+                    <div class="detail">
+                        <h4> Binders</h4>
+                        
+                        
+                    </div>                    
+                </div>
+            </li>
+            
+            <li class="active open"><a href="{% url 'quotation' %}" ><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
+                
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-gamepad"></i><span>Quotation</span></a>
+                <ul class="ml-menu">                   
+                    <li><a href="{% url 'quotation' %}">Create Quotation</a></li>
+                    <li><a href="{% url 'create_quotation' %}"> View Quotation</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="{% url 'view_invoices' %}">View Invoice</a></li>
+                </ul>
+    </div>
+</aside>
+<!-- Right Chatbar -->
+<aside id="rightchat" class="right_chat">
+    <div class="chat_body">
+        <div class="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-search"></i>
+                </span>
+            </div>
+        </div>
+        <ul class="chat-widget m-b-0 clearfix">
+            <li class="left float-left">                    
+                <div class="chat-info">                        
+                    <span class="datetime">6:12</span>                            
+                    <span class="message">Hello, John </span>
+                </div>
+            </li>
+            <li class="right">
+                <div class="chat-info">
+                    <a class="name" href="javascript:void(0);">Alexander</a>
+                    <span class="datetime">6:15</span>
+                    <span class="message">Hi, Alexander<br> How are you!</span>
+                </div>
+            </li>
+            <li class="right">
+                <div class="chat-info">
+                    <a class="name" href="javascript:void(0);">Alexander</a>
+                    <span class="datetime">6:16</span>
+                    <span class="message">There are many variations of passages of Lorem Ipsum available</span>
+                </div>
+            </li>
+            <li class="left float-left">
+                <div class="chat-info">
+                    <span class="datetime">6:25</span>
+                    <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span>
+                </div>
+            </li>
+            <li class="left float-left">
+                <div class="chat-info">
+                    <span class="datetime">6:28</span>
+                    <span class="message">I would love to join the team.</span>
+                </div>
+            </li>
+                <li class="right">
+                <div class="chat-info">
+                    <span class="datetime">7:02</span>
+                    <span class="message">Hello, <br>Michael</span>
+                </div>
+            </li>
+        </ul>
+        <div class="enter_msg">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter text here...">
+                <span class="input-group-addon"><i class="zmdi zmdi-mail-send"></i></span>
+            </div>
+        </div>
+    </div>    
+    <div class="chat_list">
+        <ul class="list-unstyled clearfix">
+            <li><a href="javascript:void(0);"><img src="../assets/images/xs/avatar1.jpg" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="../assets/images/xs/avatar2.jpg" class="rounded-circle" alt=""></a></li>
+            <li class="active"><a href="javascript:void(0);"><img src="../assets/images/xs/avatar3.jpg" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="../assets/images/xs/avatar4.jpg" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="../assets/images/xs/avatar5.jpg" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="../assets/images/xs/avatar6.jpg" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="../assets/images/xs/avatar7.jpg" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="../assets/images/xs/avatar8.jpg" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="../assets/images/xs/avatar9.jpg" class="rounded-circle" alt=""></a></li>
+        </ul>
+    </div>
+</aside>
+
+<section class="content invoice">
+    <div class="block-header">
+        <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+                <h2>Quotation Invoice
+                <small> Binders</small>
+                </h2>
+            </div>
+            <div class="col-lg-5 col-md-6 col-sm-12">
+                <ul class="breadcrumb float-md-right">
+                    <li class="breadcrumb-item"><a href="index-2.html"><i class="zmdi zmdi-home"></i> sQuare</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Pages</a></li>
+                    <li class="breadcrumb-item active">Invoice</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row clearfix ">
+            <div class="col-lg-12">
+                <div class="card bg-dark">
+                    <div class="header">
+                        <h2><strong>Invoice</strong></h2>
+                        <ul class="header-dropdown">
+                            <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="javascript:void(0);">Print Invoices</a></li>
+                                    <li role="presentation" class="divider"></li>
+                                    <li><a href="javascript:void(0);">Export to XLS</a></li>
+                                    <li><a href="javascript:void(0);">Export to CSV</a></li>
+                                    <li><a href="javascript:void(0);">Export to XML</a></li>
+                                </ul>
+                            </li>
+                            <li class="remove">
+                                <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <h3 class="m-b-0 col-white">Invoice Details : <strong class="text-primary">#A0089</strong></h3>
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item inlineblock"><a class="nav-link active" data-toggle="tab" href="#details" aria-expanded="true">Details</a></li>
+                            <li class="nav-item inlineblock"><a class="nav-link" data-toggle="tab" href="#notes" aria-expanded="false">Notes</a></li>
+                            <li class="nav-item inlineblock"><a class="nav-link" data-toggle="tab" href="#history" aria-expanded="false">History</a></li>
+                        </ul>                
+                    </div>
+                </div>
+                <div class="tab-content" >
+                    <div role="tabpanel" class="tab-pane in active" id="details" aria-expanded="true" >
+                        <div class="card" id="details">
+                            <div class="body"> 
+                             <div class="row">
+                            <div class="col-md-12">
+<img src="{% static 'banner.png' %}">
+</div>
+
+                            </div>
+                            <div class="row">
+                            <div class="col-md-12">
+<p style="margin-bottom:0px;">To,</p>
+</div>
+
+                            </div>                               
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                    {% for a in data%}
+                                        <address style="margin-bottom:0px;">
+                                            <strong>{{a.c_name}}</strong><br>
+                                            {{a.c_address}}<br>
+                                            {{a.c_email}}<br>
+                                            <abbr title="Phone">P:</abbr> {{a.c_number}}
+                                        </address>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 text-right">
+                                        <p class="m-b-0" style="margin-bottom:0px;"><strong>Order Date: </strong> {{a.order_date}}</p>
+                                        <p class="m-b-0" style="margin-bottom:0px;"><strong>Order Status: </strong> <span class="badge badge-warning m-b-0"><label id="">{{a.order_status}}</label></span></p>
+                                        <p style="margin-bottom:0px;"><strong>Order ID: </strong> #{{a.order_id}}</p>
+                                    </div>
+                                </div>
+                                <div class="mt-40"></div>
+                                <div class="row">
+                                <div class="col-md-12">
+                                <p style="margin-bottom:0px;">Dear Sir/Madam,</p>
+                                <p style="margin-left:30px;margin-bottom:0px;">We warmly welcome you and invite you to be part of our business family having satisfied customers. Therefore in furtherance of your discussion with our marketing Executive regarding the supply of Stationary Items required by you. Please find herein below the features and product details which are self explanatory.</p>
+                                </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover" style="margin-bottom:0px;">
+                                                <thead>
+                                                    <tr>
+                                                                                                                
+                                                        <th width="60px">Item</th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th>  </th>
+                                               <th></th>
+                                               <th></th>
+                                                        <th></th>
+                                                        <th>    </th>
+                                                        <th>QTY</th>
+                                                        <th>Rate    </th>
+                                                        <th>Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        
+                                                        <td style="padding:2px !important;"><strong>{{a.title}}</strong></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        
+                                                        <td style="padding:2px !important;"><strong>&nbsp;&nbsp;{{a.sub_details1}}</strong></td>
+                                                       <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;">{{a.qty1}}</td>
+                                                        <td style="padding:2px !important;">{{a.rate1}}</td>
+                                                        <td style="padding:2px !important;">{{a.sub_detail_price1}}</td>
+                                                    </tr>
+                                                      <tr>
+                                                        
+                                                        <td style="padding:2px !important;"><strong>&nbsp;&nbsp;{{a.sub_details2}}</strong></td>
+                                                       <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                       <td style="padding:2px !important;">{{a.qty2}}</td>
+                                                        <td style="padding:2px !important;">{{a.rate2}}</td>
+                                                        <td style="padding:2px !important;">{{a.sub_detail_price2}}</td>
+                                                    </tr>
+                                                     <tr>
+                                                        
+                                                        <td style="padding:2px !important;"><strong>&nbsp;&nbsp;{{a.sub_details3}}</strong></td>
+                                                            <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                       <td style="padding:2px !important;">{{a.qty3}}</td>
+                                                        <td style="padding:2px !important;">{{a.rate3}}</td>
+                                                        <td style="padding:2px !important;">{{a.sub_detail_price3}}</td>
+                                                    </tr>
+                                                     <tr>
+                                                        
+                                                        <td style="padding:2px !important;"><strong>&nbsp;&nbsp;{{a.sub_details4}}</strong></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                       <td style="padding:2px !important;">{{a.qty4}}</td>
+                                                        <td style="padding:2px !important;">{{a.rate4}}</td>
+                                                        <td style="padding:2px !important;">{{a.sub_detail_price4}}</td>
+                                                    </tr>
+                                                     <tr>
+                                                        
+                                                        <td style="padding:2px !important;"><strong>&nbsp;&nbsp;{{a.sub_details5}}</strong></td>
+                                                       <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                       <td style="padding:2px !important;">{{a.qty5}}</td>
+                                                        <td style="padding:2px !important;">{{a.rate5}}</td>
+                                                        <td style="padding:2px !important;">{{a.sub_detail_price5}}</td>
+                                                    </tr>
+                                                     <tr>
+                                                        
+                                                        <td style="padding:2px !important;"><strong>&nbsp;&nbsp;{{a.sub_details6}}</strong></td>
+                                                       <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                       <td style="padding:2px !important;">{{a.qty6}}</td>
+                                                        <td style="padding:2px !important;">{{a.rate6}}</td>
+                                                        <td style="padding:2px !important;">{{a.sub_detail_price6}}</td>
+                                                    </tr>
+                                                     <tr>
+                                                        
+                                                        <td style="padding:2px !important;"><strong>&nbsp;&nbsp;{{a.sub_details7}}</strong></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                       <td style="padding:2px !important;">{{a.qty7}}</td>
+                                                        <td style="padding:2px !important;">{{a.rate7}}</td>
+                                                        <td style="padding:2px !important;">{{a.sub_detail_price7}}</td>
+                                                    </tr>
+                                                     <tr>
+                                                        
+                                                        <td style="padding:2px !important;"><strong>&nbsp;&nbsp;{{a.sub_details8}}</strong></td>
+                                                         <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                       <td style="padding:2px !important;">{{a.qty8}}</td>
+                                                        <td style="padding:2px !important;"> {{a.rate8}}</td>
+                                                        <td style="padding:2px !important;">{{a.sub_detail_price8}}</td>
+                                                    </tr>
+                                                     <tr>
+                                                        
+                                                        <td style="padding:2px !important;"><strong>&nbsp;&nbsp;{{a.sub_details9}}</strong></td>
+                                                          <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                       <td style="padding:2px !important;">{{a.qty9}}</td>
+                                                        <td style="padding:2px !important;">{{a.rate9}}</td>
+                                                        <td style="padding:2px !important;">{{a.sub_detail_price9}}</td>
+                                                    </tr>
+                                                     <tr>
+                                                        
+                                                        <td style="padding:2px !important;"><strong>&nbsp;&nbsp;{{a.sub_details10}}</strong></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                        <td style="padding:2px !important;"></td>
+                                                       <td style="padding:2px !important;">{{a.qty10}}</td>
+                                                        <td style="padding:2px !important;">{{a.rate10}}</td>
+                                                        <td style="padding:2px !important;">{{a.sub_detail_price10}}</td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        </div>
+                                    <div class="col-md-6 text-right">
+                                                                                
+                                        <h5 class="m-b-0 m-t-10">Total: INR {{a.total}}</h5>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="row">
+                                    <div class="col-md-12">
+                                        <p style="margin-bottom:0px;">The rates proposed are variable and subjected to the change on the account of inclusion or exclusion of features and quantity of product and accessory matters related thereto. The detailed terms and conditions as shall be forming part of purchase order as you may place upon us and the order acceptance are attached here to facilitate the process to commence and conduct the transaction between us.</p>
+
+                                        <p style="margin-bottom:0px;">That if you find our basic specification and price details suitable to you then please place your purchase order and we shall do the needfull in furtherance thereof, That broad commercial terms and conditions may be part of order / acceptance are introduced as under:</p>
+                                     </div>
+                                     <div class="col-md-6">
+                                     <h5 style="margin-bottom:0px;">Terms and Conditions</h5>
+                                     <ul style="list-style-type:circle;" style="margin-bottom:0px;">
+  <li>GST extra as per applicable.</li>
+  <li>Delivery after 10 days of order confirmation or according to work.</li>
+  <li>Transportation will be paid by the customer.</li>
+  <li>50% payment of price shall be paid by cheque in advance.</li>
+  <li>Payment through Cheque or DD in favour of <b>CHOUHARY BINDERS & Printers</b>, payable at VIDHYADHAR NAGAR, JAIPUR.</li>
+  <li>RTGS/NEFT can be done to the <b>BANK OF MAHARASHTRA A/c No. 60132048140, RTGS/NEFT/IFSC code MAHB0001306</b></li>
+  <li>There may be +10% variation inquantity</li>
+  <li>There may be -10% variation inquantity</li>
+  <li>Quotation is valid for 15 days only</li>
+  <li>Expecting your prompt & positive reply. If you have any query please feel free to contact to <b>Mr. Shayam lal </b> 9829013457</li>
+
+</ul>
+<p style="margin-bottom:0px;">
+Thanking You</p>
+<p style="margin-bottom:0px;">Yours truly,</p>
+
+                                     </div>   
+                                    </div>
+                                                                     
+                                    <div class="hidden-print col-md-12 text-right">
+                                        <hr>
+                                        <button class="btn btn-warning btn-icon btn-icon-mini btn-round" onclick="printDiv('details')"><i class="zmdi zmdi-print"></i></button>
+                                         <button class="btn btn-raised btn-primary btn-round waves-effect" id="add_client" onclick="showDiv()"> Update Payment </button>
+                                        
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="notes" aria-expanded="false">
+                        <div class="row clearfix js-sweetalert"> 
+                            <div class="col-lg-6 col-md-12">
+                                <div class="card">
+                                    <div class="header">
+                                        <h2><strong>ID:</strong> {{a.id}}</h2>
+                                        <small>Created at: {{a.date}}</small>
+                                    </div>
+                                    <div class="body">
+                                        <h6>This is Note</h6>
+                                        <p class="m-b-0">{{a.note}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="card">
+                                    <div class="header">
+                                        <h2><strong>ID:</strong> 25823</h2>
+                                        <small>Created at: 19 Dec, 2017</small>
+                                    </div>
+                                    <div class="body">
+                                        <h6>This is Note</h6>
+                                        <p class="m-b-0">Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                            Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                            pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                            sadipscing mel.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="card">
+                                    <div class="header">
+                                        <h2><strong>ID:</strong> 25824</h2>
+                                        <small>Created at: 18 Dec, 2017</small>
+                                    </div>
+                                    <div class="body">
+                                        <h6>This is Note</h6>
+                                        <p class="m-b-0">Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                            Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                            pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                            sadipscing mel.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <div class="card">
+                                    <div class="header">
+                                        <h2><strong>ID:</strong> 25825</h2>
+                                        <small>Created at: 19 Dec, 2017</small>
+                                    </div>
+                                    <div class="body">
+                                        <h6>This is Note</h6>
+                                        <p class="m-b-0">Lorem ipsum dolor sit amet, ut duo atqui exerci dicunt, ius impedit mediocritatem an. Pri ut tation electram moderatius.
+                                            Per te suavitate democritum. Duis nemore probatus ne quo, ad liber essent aliquid
+                                            pro. Et eos nusquam accumsan, vide mentitum fabellas ne est, eu munere gubergren
+                                            sadipscing mel.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12">
+                                <button class="btn btn-raised btn-primary waves-effect btn-round" id="prompt" data-type="prompt">Add Note</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="history" aria-expanded="false">
+                        <div class="card" id="details">
+                            <div class="body">                                
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6">
+                                        <address>
+                                            <strong>ThemeMakker Inc.</strong><br>
+                                            795 Folsom Ave, Suite 546<br>
+                                            San Francisco, CA 54656<br>
+                                            <abbr title="Phone">P:</abbr> (123) 456-34636
+                                        </address>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 text-right">
+                                        <p class="m-b-0"><strong>Order Date: </strong> Jun 15, 2018</p>
+                                        <p class="m-b-0"><strong>Order Status: </strong> <span class="badge bg-orange">Pending</span></p>
+                                        <p><strong>Order ID: </strong> #123456</p>
+                                    </div>
+                                </div>
+                                <div class="mt-40"></div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                   
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Amount</th>
+                                                        <th>Description</th>
+                                                        <th>Date</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    {% for a in data %}
+                                                    <tr>
+                                                        <td>#</td>
+                                                        <td>{{a.total}}</td>
+                                                        <td>Invoice Created </td>
+                                                        <td>{{a.order_date}}</td>
+                                                        <td><span class="badge badge-default">Success</span></td>
+                                                    </tr>
+                                                    {% endfor %}
+                                                    {% for a in dataa %}
+                                                    <tr>
+                                                        <td>{{a.id}}</td>
+                                                        <td>{{a.payment}}</td>
+                                                        <td>{{a.description}}</td>
+                                                        <td>{{a.payment_date}}</td>
+                                                        <td><span class="badge badge-default">{{a.payment_status}}</span></td>
+                                                    </tr>
+                                                    {% endfor %}
+                                                  
+                                                     <tr>
+                                                        <td>1</td>
+                                                        <td>0</td>
+                                                        <td>Invoice Sent</td>
+                                                        <td>19 Dec, 2017</td>
+                                                        <td><span class="badge badge-default">Panding</span></td>
+                                                    </tr>
+                                                     <tr>
+                                                        <td>1</td>
+                                                        <td>0</td>
+                                                        <td>Invoice Paid</td>
+                                                        <td>20 Dec, 2017</td>
+                                                        <td><span class="badge badge-success">Success</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+            <div class="col-lg-12 col-md-12 col-sm-12" id="abc" style="display:none;">
+                    <div class="">        
+
+                        <div class="row clearfix">
+                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                    <div class="card">
+                                        <div class="header">
+                                            <h2><strong>Received</strong> Payment</h2>
+                                            <ul>
+                                                    <button class="btn btn-Warning btn-icon btn-icon-mini btn-round" style="float:right;" id="hid" onclick="hideDiv()"><i class="zmdi zmdi-close"></i></button>
+                                            </ul>
+                    
+                                        </div>
+                                        <div class="body">
+                                            <form id="form_validation" method="POST" action="{% url 'update' %}" onsubmit="return validateForm()">
+                                                {% csrf_token %}
+                                                    <div class="form-group form-float">
+                                                            <label class="form-label" >Total Amount: <strong ><label  id="total_amount">{% for a in data %}{{a.total}}{% endfor %}</label> </strong></label>
+                                                            </div>
+                                                <div class="form-group form-float" >
+                                                    {% for a in data %}
+                                                    <input type="hidden" name="order_id" value="{{a.order_id}}">{% endfor %}
+                                                    <input type="hidden" name="payment_status" value="SUCCES">
+                                                    <input type="hidden" name="description" value="Payment Recived">
+                                                    <input type="text" class="form-control" max="4" placeholder="Enter Received amount" name="amt_received" required  id="amt_received">
+                                                </div>
+                                        
+                                            <div class="form-group">
+                                                    <div class="checkbox">
+                                                        <input id="checkbox" type="checkbox">
+                                                        <label for="checkbox">I have read and Confirmed the details</label>
+                                                    </div>
+                                                    <button class="btn btn-raised btn-primary btn-round waves-effect" style="float: none" type="submit">SUBMIT</button>
+                                            
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>           
+                        </div>
+                        
+                    </div>
+</section>
+
+<script>
+function showDiv() {
+   document.getElementById('abc').style.display = "block";
+}
+function hideDiv() {
+   document.getElementById('abc').style.display = "none";
+}
+        </script>
+<script>
+
+		function printDiv(divName){
+			var printContents = document.getElementById(divName).innerHTML;
+			var originalContents = document.body.innerHTML;
+			document.body.innerHTML = printContents;
+			window.print();
+			document.body.innerHTML = originalContents;
+		}
+</script>
+{% block javascript %}
+    <script type="text/javascript">
+        {% for a in data %}
+        var total={{a.total}};
+        var pay=0;
+        {% endfor %}
+        {% for b in dataa %}
+        pay=pay+{{b.payment}};
+        {% endfor %}
+        total=total-pay;
+        document.getElementById('total_amount').innerHTML = total;
+
+        
+    </script>
+    <script>
+    function validateForm() {
+        var x = document.getElementById('amt_received').value;
+        if (x > total) {
+          alert("transection must be less than or equal to the amount ");
+          return false;
+        }
+      }
+    </script>
+    <!-- The contents of myscript.js will be loaded inside the script tag -->
+{% endblock %}
+      
+<!-- Jquery Core Js --> 
+<script src="{% static 'assets/bundles/libscripts.bundle.js'%}"></script> <!-- Lib Scripts Plugin Js --> 
+<script src="{% static 'assets/bundles/vendorscripts.bundle.js'%}"></script> <!-- Lib Scripts Plugin Js --> 
+
+<script src="{% static 'new/assets/plugins/sweetalert/sweetalert.min.js'%}"></script> <!-- SweetAlert Plugin Js --> 
+
+<script src="{% static 'assets/bundles/mainscripts.bundle.js'%}"></script><!-- Custom Js --> 
+<script src="{% static 'assets/js/pages/ui/dialogs.js'%}"></script>
+</body>
+
+
+</html>
