@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import mongoengine
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -76,14 +77,11 @@ WSGI_APPLICATION = 'lr_leave.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': os.path.join(BASE_DIR, 'lr_leave/my.cnf'),
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
-    }
+        'ENGINE': 'djongo'
+    },
 }
-
+from mongoengine import connect
+connect('kkTEST',host='192.168.1.17', port=27017)
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators

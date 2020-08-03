@@ -1,0 +1,4 @@
+# Virtual Enviornment
+venv
+*.vscode
+*.pyc

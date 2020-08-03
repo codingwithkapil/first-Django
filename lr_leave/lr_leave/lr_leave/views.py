@@ -5,7 +5,6 @@ from django.urls import reverse
 from .models import  Add_client,Visiting_card, Broucher,id_card,entry_pass,invitation_card,pamplate,latter_head_box,envelope,payment,notes
 from django.views.decorators.csrf import csrf_protect
 from django.db import connection
-import pandas as pd
 import random
 from django.contrib.auth.hashers import make_password
 import math
