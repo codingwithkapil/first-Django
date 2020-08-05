@@ -11,11 +11,10 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import mongoengine
-
+from pymongo import MongoClient
+from six.moves.urllib.parse import quote_plus
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -71,18 +70,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'lr_leave.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo'
-    },
+        'ENGINE': 'djongo',
+        'NAME': 'pycodes',
+        'CLIENT': {
+            'host':'mongodb+srv://kapil:' + quote_plus("9787871533k@K") +'@pycodes.ozrx7.mongodb.net/pycodes?retryWrites=true&w=majority'
+        },
+    }
 }
-from mongoengine import connect
-connect('kkTEST',host='192.168.1.17', port=27017)
-
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 
