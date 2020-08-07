@@ -1,0 +1,5 @@
+django 
+djongo
+dnspython
+pymongo
+six
