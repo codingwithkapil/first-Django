@@ -78,7 +78,7 @@ DATABASES = {
         'ENGINE': 'djongo',
         'NAME': 'pycodes',
         'CLIENT': {
-            'host':'mongodb+srv://kapil:' + quote_plus("9787871533k@K") +'@pycodes.ozrx7.mongodb.net/pycodes?retryWrites=true&w=majority'
+            'host':'mongodb+srv://kapil:' + quote_plus("pycodes@21210") +'@pycodes.ozrx7.mongodb.net/pycodes?retryWrites=true&w=majority'
         },
     }
 }
