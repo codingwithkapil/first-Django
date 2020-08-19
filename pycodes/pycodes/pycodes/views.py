@@ -10,3 +10,6 @@ import math
 
 def index(request):
     return render(request, 'attendance.html')
+    
+def indexcopy(request):
+    return render(request, 'attendance copy.html')

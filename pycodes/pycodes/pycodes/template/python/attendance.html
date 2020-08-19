@@ -1,0 +1,511 @@
+{% load static %}
+<!doctype html>
+<a class="no-js " lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<meta name="description" content="sQuare Bootstrap 4 Admin Dashboard with ui kit.">
+
+<title>Binders | Add Quotation</title>
+<link rel="icon" href="logo.ico" type="image/x-icon">
+<link  rel="stylesheet" href="{% static 'new/assets/plugins/bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'new/assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css' %}" /><!-- Colorpicker Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/multi-select/css/multi-select.css' %}"><!-- Multi Select Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/jquery-spinner/css/bootstrap-spinner.css' %}"><!-- Bootstrap Spinner Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css' %}"><!-- Bootstrap Tagsinput Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/bootstrap-select/css/bootstrap-select.css' %}" /><!-- Bootstrap Select Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/nouislider/nouislider.min.css' %}" /><!-- noUISlider Css -->
+<link rel="stylesheet" href="{% static 'new/assets/plugins/select2/select2.css' %}" /><!-- Select2 -->
+<!-- Custom Css -->
+<link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/search.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/color_skins.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<style>
+    footer {
+        position: relative;
+        bottom: 0px;
+    }
+</style>
+
+</head>
+<body class="theme-cyan">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <!-- <div class="m-t-30"> for rung time image view </div> -->
+        <p>Please wait...</p>        
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+
+<!-- Top Bar -->
+<nav class="navbar">
+    <ul class="nav navbar-nav navbar-left">
+        <li>
+            <a href="javascript:void(0);" class="menu-sm" data-close="true">
+                <i class="zmdi zmdi-arrow-left"></i>
+                <i class="zmdi zmdi-arrow-right"></i>
+            </a>
+            <div class="navbar-header">
+                <a href="javascript:void(0);" class="bars"></a>
+                <a class="navbar-brand" href="index.html"><img src="static\assets\logo\Logo.png" style="width: 40px;margin-left: 19px;"alt="Binders"><span class="m-l-10">Binders</span></a>
+            </div>
+        </li>        
+        <li>
+
+        </li>
+        <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle  hidden-sm-down" data-toggle="dropdown" role="button">programing</i></a>
+            <ul class="dropdown-menu pullDown">
+                <li><a href="mail-inbox.html"><i class="zmdi zmdi-home m-r-10"></i><span>Home</span></a></li>
+                <li><a href="contact.html"><i class="zmdi zmdi-task m-r-10"></i><span>Creat Quotation List</span></a></li>
+                <li><a href="chat.html"><i class="zmdi zmdi-comment-text m-r-10"></i><span>View Order Progress</span></a></li>
+                             
+            </ul>
+        </li>
+        <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle  hidden-sm-down" data-toggle="dropdown" role="button">Dev-ops</i></a>
+            <ul class="dropdown-menu pullDown">
+                <li><a href="mail-inbox.html"><i class="zmdi zmdi-home m-r-10"></i><span>Home</span></a></li>
+                <li><a href="contact.html"><i class="zmdi zmdi-task m-r-10"></i><span>Creat Quotation List</span></a></li>
+                <li><a href="chat.html"><i class="zmdi zmdi-comment-text m-r-10"></i><span>View Order Progress</span></a></li>
+                             
+            </ul>
+        </li>
+        <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle  hidden-sm-down" data-toggle="dropdown" role="button">front-end</i></a>
+            <ul class="dropdown-menu pullDown">
+                <li><a href="mail-inbox.html"><i class="zmdi zmdi-home m-r-10"></i><span>Home</span></a></li>
+                <li><a href="contact.html"><i class="zmdi zmdi-task m-r-10"></i><span>Creat Quotation List</span></a></li>
+                <li><a href="chat.html"><i class="zmdi zmdi-comment-text m-r-10"></i><span>View Order Progress</span></a></li>
+                             
+            </ul>
+        </li>
+        <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle  hidden-sm-down" data-toggle="dropdown" role="button">backend</i></a>
+            <ul class="dropdown-menu pullDown">
+                <li><a href="mail-inbox.html"><i class="zmdi zmdi-home m-r-10"></i><span>Home</span></a></li>
+                <li><a href="contact.html"><i class="zmdi zmdi-task m-r-10"></i><span>Creat Quotation List</span></a></li>
+                <li><a href="chat.html"><i class="zmdi zmdi-comment-text m-r-10"></i><span>View Order Progress</span></a></li>
+                             
+            </ul>
+        </li>
+        <li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle  hidden-sm-down" data-toggle="dropdown" role="button">fullstack</i></a>
+            <ul class="dropdown-menu pullDown">
+                <li><a href="mail-inbox.html"><i class="zmdi zmdi-home m-r-10"></i><span>Home</span></a></li>
+                <li><a href="contact.html"><i class="zmdi zmdi-task m-r-10"></i><span>Creat Quotation List</span></a></li>
+                <li><a href="chat.html"><i class="zmdi zmdi-comment-text m-r-10"></i><span>View Order Progress</span></a></li>
+                             
+            </ul>
+        </li>
+        <li class="dropdown task"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button"><i class="zmdi zmdi-flag"></i>
+            <span class="label-count">3</span>
+            </a>
+            <ul class="dropdown-menu pullDown">
+                <li class="header">Project</li>
+                <li class="body">
+                    <ul class="menu tasks list-unstyled">
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Clockwork Orange <span class="float-right">29%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="29" aria-valuemin="0" aria-valuemax="100" style="width: 29%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Blazing Saddles <span class="float-right">78%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-slategray" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100" style="width: 78%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Project Archimedes <span class="float-right">45%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Eisenhower X <span class="float-right">68%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-coral" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <span class="text-muted">Oreo Admin Templates <span class="float-right">21%</span></span>
+                                <div class="progress">
+                                    <div class="progress-bar l-amber" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100" style="width: 21%;"></div>
+                                </div>
+                            </a>
+                        </li>                        
+                    </ul>
+                </li>
+                <li class="footer"><a href="javascript:void(0);">View All</a></li>
+            </ul>
+        </li>        
+        <li class="search_bar hidden-sm-down float-right">
+            <div class="input-group" id="demo-2">                
+                <input type="text" class="form-control" placeholder="Search Quotation and Order...">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-search"></i>
+                </span>
+            </div>
+        </li>
+        <li class="float-right">            
+            <a href="javascript:void(0);" class="fullscreen hidden-md-down hidden-sm-down" data-provide="fullscreen"><i class="zmdi zmdi-fullscreen"></i></a>            
+        </li>        
+    </ul>
+</nav>
+<!-- Left Sidebar -->
+<aside id="leftsidebar" class="sidebar">
+    <div class="menu">     
+        <ul class="list">
+            <li>
+                <div class="user-info">
+                    <div class="image"><a href="index.html"><img src="https://s3-ap-southeast-1.amazonaws.com/tv-prod/member/photo/7862251-large.jpg" alt="User"></a></div>                   
+                </div>
+            </li>
+            
+            <li class="active open"><a href="#" ><i class="zmdi zmdi-home"></i><span>Dashboard</span></a>
+                
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-gamepad"></i><span>Quotation</span></a>
+                <ul class="ml-menu">                   
+                    <li><a href="{% url 'home2' %}">Create Quotation</a></li>
+                    <li><a href="#"> View Quotation</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+            <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-widgets"></i><span>Invoice</span></a>
+                <ul class="ml-menu">
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                    <li><a href="#">View Invoice</a></li>
+                </ul>
+            </li>
+
+    </div>
+</aside>
+<!-- Right Chatbar -->
+<!-- <aside id="rightchat" class="right_chat">
+    <div class="chat_body">
+        <div class="search">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search...">
+                <span class="input-group-addon">
+                    <i class="zmdi zmdi-search"></i>
+                </span>
+            </div>
+        </div>
+        <ul class="chat-widget m-b-0 clearfix">
+            <li class="left float-left">                    
+                <div class="chat-info">                        
+                    <span class="datetime">6:12</span>                            
+                    <span class="message">Hello, John </span>
+                </div>
+            </li>
+            <li class="right">
+                <div class="chat-info">
+                    <a class="name" href="javascript:void(0);">Alexander</a>
+                    <span class="datetime">6:15</span>
+                    <span class="message">Hi, Alexander<br> How are you!</span>
+                </div>
+            </li>
+            <li class="right">
+                <div class="chat-info">
+                    <a class="name" href="javascript:void(0);">Alexander</a>
+                    <span class="datetime">6:16</span>
+                    <span class="message">There are many variations of passages of Lorem Ipsum available</span>
+                </div>
+            </li>
+            <li class="left float-left">
+                <div class="chat-info">
+                    <span class="datetime">6:25</span>
+                    <span class="message">Hi, Alexander,<br> John <br> What are you doing?</span>
+                </div>
+            </li>
+            <li class="left float-left">
+                <div class="chat-info">
+                    <span class="datetime">6:28</span>
+                    <span class="message">I would love to join the team.</span>
+                </div>
+            </li>
+                <li class="right">
+                <div class="chat-info">
+                    <span class="datetime">7:02</span>
+                    <span class="message">Hello, <br>Michael</span>
+                </div>
+            </li>
+        </ul>
+        <div class="enter_msg">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter text here...">
+                <span class="input-group-addon"><i class="zmdi zmdi-mail-send"></i></span>
+            </div>
+        </div>
+    </div>    
+    <div class="chat_list">
+        <ul class="list-unstyled clearfix">
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar1.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar2.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li class="active"><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar3.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar4.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar5.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar6.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar7.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar8.jpg' %}" class="rounded-circle" alt=""></a></li>
+            <li><a href="javascript:void(0);"><img src="{% static '../assets/images/xs/avatar9.jpg' %}" class="rounded-circle" alt=""></a></li>
+        </ul>
+    </div>
+</aside> -->
+<!-- Right Sidebar -->
+
+
+<section class="content">
+    <div class="container-fluid">
+    <div class="container-fluid"></div>
+                       
+        <!-- Basic Validation -->
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="card text-center">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="block-header">
+                                <div class="row">
+                                        <h2 class="text-center">Python Tutorial</h2>
+                                </div>
+                            </div>
+                          <p class="card-text">Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl, Python source code is also available under the GNU General Public License (GPL). This tutorial gives enough understanding on Python programming language.
+                            Why to Learn Python?
+                            
+                            Python is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.
+                            
+                            Python is a MUST for students and working professionals to become a great Software Engineer specially when they are working in Web Development Domain. I will list down some of the key advantages of learning Python:
+                            
+                                Python is Interpreted − Python is processed at runtime by the interpreter. You do not need to compile your program before executing it. This is similar to PERL and PHP.
+                            
+                                Python is Interactive − You can actually sit at a Python prompt and interact with the interpreter directly to write your programs.
+                            
+                                Python is Object-Oriented − Python supports Object-Oriented style or technique of programming that encapsulates code within objects.
+                            
+                                Python is a Beginner's Language − Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.
+                            
+                            Characteristics of Python
+                            
+                            Following are important characteristics of Python Programming −
+                            
+                                It supports functional and structured programming methods as well as OOP.
+                            
+                                It can be used as a scripting language or can be compiled to byte-code for building large applications.
+                            
+                                It provides very high-level dynamic data types and supports dynamic type checking.
+                            
+                                It supports automatic garbage collection.
+                            
+                                It can be easily integrated with C, C++, COM, ActiveX, CORBA, and Java.
+                            
+                            Hello World using Python.
+                            
+                            Just to give you a little excitement about Python, I'm going to give you a small conventional Python Hello World program, You can try it using Demo link.
+                            Live Demo
+                            
+                            print ("Hello, Python!");
+                            
+                            Applications of Python
+                            
+                            As mentioned before, Python is one of the most widely used language over the web. I'm going to list few of them here:
+                            
+                                Easy-to-learn − Python has few keywords, simple structure, and a clearly defined syntax. This allows the student to pick up the language quickly.
+                            
+                                Easy-to-read − Python code is more clearly defined and visible to the eyes.
+                            
+                                Easy-to-maintain − Python's source code is fairly easy-to-maintain.
+                            
+                                A broad standard library − Python's bulk of the library is very portable and cross-platform compatible on UNIX, Windows, and Macintosh.
+                            
+                                Interactive Mode − Python has support for an interactive mode which allows interactive testing and debugging of snippets of code.
+                            
+                                Portable − Python can run on a wide variety of hardware platforms and has the same interface on all platforms.
+                            
+                                Extendable − You can add low-level modules to the Python interpreter. These modules enable programmers to add to or customize their tools to be more efficient.
+                            
+                                Databases − Python provides interfaces to all major commercial databases.
+                            
+                                GUI Programming − Python supports GUI applications that can be created and ported to many system calls, libraries and windows systems, such as Windows MFC, Macintosh, and the X Window system of Unix.
+                            
+                                Scalable − Python provides a better structure and support for large programs than shell scripting.
+                            
+                            Audience
+                            
+                            This Python tutorial is designed for software programmers who need to learn Python programming language from scratch.
+                            Prerequisites
+                            
+                            You should have a basic understanding of Computer Programming terminologies. A basic understanding of any of the programming languages is a plus.</p>
+                            <p class="card-text">Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. It was created by Guido van Rossum during 1985- 1990. Like Perl, Python source code is also available under the GNU General Public License (GPL). This tutorial gives enough understanding on Python programming language.
+                                Why to Learn Python?
+                                
+                                Python is a high-level, interpreted, interactive and object-oriented scripting language. Python is designed to be highly readable. It uses English keywords frequently where as other languages use punctuation, and it has fewer syntactical constructions than other languages.
+                                
+                                Python is a MUST for students and working professionals to become a great Software Engineer specially when they are working in Web Development Domain. I will list down some of the key advantages of learning Python:
+                                
+                                    Python is Interpreted − Python is processed at runtime by the interpreter. You do not need to compile your program before executing it. This is similar to PERL and PHP.
+                                
+                                    Python is Interactive − You can actually sit at a Python prompt and interact with the interpreter directly to write your programs.
+                                
+                                    Python is Object-Oriented − Python supports Object-Oriented style or technique of programming that encapsulates code within objects.
+                                
+                                    Python is a Beginner's Language − Python is a great language for the beginner-level programmers and supports the development of a wide range of applications from simple text processing to WWW browsers to games.
+                                
+                                Characteristics of Python
+                                
+                                Following are important characteristics of Python Programming −
+                                
+                                    It supports functional and structured programming methods as well as OOP.
+                                
+                                    It can be used as a scripting language or can be compiled to byte-code for building large applications.
+                                
+                                    It provides very high-level dynamic data types and supports dynamic type checking.
+                                
+                                    It supports automatic garbage collection.
+                                
+                                    It can be easily integrated with C, C++, COM, ActiveX, CORBA, and Java.
+                                
+                                Hello World using Python.
+                                
+                                Just to give you a little excitement about Python, I'm going to give you a small conventional Python Hello World program, You can try it using Demo link.
+                                Live Demo
+                                
+                                print ("Hello, Python!");
+                                
+                                Applications of Python
+                                
+                                As mentioned before, Python is one of the most widely used language over the web. I'm going to list few of them here:
+                                
+                                    Easy-to-learn − Python has few keywords, simple structure, and a clearly defined syntax. This allows the student to pick up the language quickly.
+                                
+                                    Easy-to-read − Python code is more clearly defined and visible to the eyes.
+                                
+                                    Easy-to-maintain − Python's source code is fairly easy-to-maintain.
+                                
+                                    A broad standard library − Python's bulk of the library is very portable and cross-platform compatible on UNIX, Windows, and Macintosh.
+                                
+                                    Interactive Mode − Python has support for an interactive mode which allows interactive testing and debugging of snippets of code.
+                                
+                                    Portable − Python can run on a wide variety of hardware platforms and has the same interface on all platforms.
+                                
+                                    Extendable − You can add low-level modules to the Python interpreter. These modules enable programmers to add to or customize their tools to be more efficient.
+                                
+                                    Databases − Python provides interfaces to all major commercial databases.
+                                
+                                    GUI Programming − Python supports GUI applications that can be created and ported to many system calls, libraries and windows systems, such as Windows MFC, Macintosh, and the X Window system of Unix.
+                                
+                                    Scalable − Python provides a better structure and support for large programs than shell scripting.
+                                
+                                Audience
+                                
+                                This Python tutorial is designed for software programmers who need to learn Python programming language from scratch.
+                                Prerequisites
+                                
+                                You should have a basic understanding of Computer Programming terminologies. A basic understanding of any of the programming languages is a plus.</p>
+                        </div>
+                      </div>
+        </div> 
+    </div>
+<footer><p> &#169; 2020 , copyright kapil sharma, All right reserved.</p>
+    </footer>
+</section>
+
+
+<!-- Jquery Core Js --> 
+<script src="{% static 'assets/bundles/libscripts.bundle.js' %}"></script> <!-- Lib Scripts Plugin Js --> 
+<script src="{% static 'assets/bundles/vendorscripts.bundle.js' %}"></script> <!-- Lib Scripts Plugin Js --> 
+<script src="{% static 'assets/bundles/mainscripts.bundle.js' %}"></script><!-- Custom Js --> 
+</body>
+</html
