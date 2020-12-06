@@ -25,7 +25,7 @@ SECRET_KEY = '&mk4wcaew^l5ni0pa8uz_mf&vr@vs&o&u4$1xfz+e_otyw7ecz'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://binders.herokuapp.com/','127.0.0.1']
 
 
 # Application definition
