@@ -1,1 +1,1 @@
-web: gunicorn login.wsgi --log-file -
+web: gunicorn lr_leave.wsgi --log-file -
